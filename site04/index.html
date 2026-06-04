@@ -206,14 +206,22 @@ section{padding:8rem 1.5rem;position:relative}
   position:relative;overflow:hidden;
   display:flex;align-items:center;justify-content:center;
 }
-.shot::before{
-  content:"";position:absolute;inset:0;
+.shot::before {
+  content:"";
+  position:absolute;
+  inset:0;
   background:
     radial-gradient(circle at 30% 40%, rgba(255,230,180,.08), transparent 50%),
     repeating-linear-gradient(90deg,rgba(255,255,255,.02) 0 1px,transparent 1px 40px),
     repeating-linear-gradient(0deg,rgba(255,255,255,.02) 0 1px,transparent 1px 40px);
+  pointer-events: none; /* ← THIS IS THE FIX */
 }
 .shot span{position:relative;z-index:1;font-family:'Space Mono',monospace;font-size:.65rem;letter-spacing:.4em;color:var(--bone-dim);text-transform:uppercase}
+
+.shot iframe {
+  position: relative;
+  z-index: 2;
+}
 
 /* Rifts */
 .rifts{background:#06070a}
