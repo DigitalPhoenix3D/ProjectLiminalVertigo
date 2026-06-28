@@ -607,7 +607,7 @@
       </h1>
       <p class="hero-subtitle">A First-Person Procedural Escape Horror Experience</p>
       <div class="hero-ctas">
-        <button class="btn-primary" data-testid="btn-wishlist">Follow on Itch.io</button>
+        <button class="btn-primary" data-testid="btn-wishlist" id="btnFollow">Follow on Itch.io</button>
         <button class="btn-ghost"    data-testid="btn-explore" id="btnExplore">Explore the Rifts</button>
       </div>
     </section>
@@ -805,6 +805,12 @@ And eventually — whether it takes minutes or lifetimes — you will stop askin
       document.getElementById('btnExplore').addEventListener('click', function () {
         showSection('game');
       });
+
+      // "Follow Development" CTA
+      document.getElementById('btnFollow').addEventListener('click', function () {
+        showSection('store');
+      });
+
     })();
   </script>
 
